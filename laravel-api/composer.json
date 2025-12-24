@@ -1,0 +1,36 @@
+{
+    "name": "beyondchats/article-api",
+    "type": "project",
+    "description": "Laravel API for BeyondChats articles",
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0",
+        "guzzlehttp/guzzle": "^7.2",
+        "symfony/dom-crawler": "^6.0",
+        "symfony/css-selector": "^6.0",
+        "nesbot/carbon": "^2.0"
+    },
+    "require-dev": {
+        "laravel/sail": "^1.18"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
